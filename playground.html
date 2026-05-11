@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html Lang="En">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="James Woodward-Caradonna">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Homepage</title>
+        <link rel="stylesheet" type="text/css" href="playground.css" title="playground" />
+
+        <!--playfair display font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <!---->
+        
+        <script src="playground.js" defer="true"></script>
+    </head>
+
+<!---------------------------------------------- GOALS ---------------------------------------------->
+<!-- The main goal of this project is to develop a website where i can write 
+ down things in my life, accomplishments, talk about ideas, new projects, etc.
+ 
+ for now, i think it is best to relearn the basics of html and learn how to
+ use html to code what i would like to code. i should do this before attempting to write any
+ html because i would rather have a website with better code structure
+ that takes me longer to get started on than a website with code structure
+ that I will have to change and fix later-->
+
+<!-- If youre interested, something you could try to implement at some point is
+ Ada Lovelace's algorithm for calculating Bernoulli numbers. Using this algorithm,
+ you could also find the general result for any series of the form
+ 1/n^2k, k\inZ -->
+    <body>
+        <div class="featured-content">
+            <div class="slideshow slideshow-fade">
+                <div class="slideshow-numbers">
+                    1 / 3
+                </div>
+                <img src="https://www.purina-arabia.com/sites/default/files/styles/hero_image_regular_desktop/public/2025-09/AOA_CENMKTG_PU_Website%20Article_27-Your%20Cat%27s%20Age%20in%20Human%20Years_1440x560px_091625_1.jpg?itok=2LtZAIvP" style="width: 100%">
+                <div class="text">Caption One</div>
+            </div>
+            <div class="slideshow slideshow-fade">
+                <div class="slideshow-numbers">
+                    2 / 3
+                </div>
+                <img src="https://www.purina-arabia.com/sites/default/files/styles/hero_image_regular_desktop/public/2025-09/AOA_CENMKTG_PU_Website%20Article_27-Your%20Cat%27s%20Age%20in%20Human%20Years_1440x560px_091625_1.jpg?itok=2LtZAIvP" style="width: 100%">
+                <div class="text">Caption Two</div>
+            </div>
+            <div class="slideshow slideshow-fade">
+                <div class="slideshow-numbers">
+                    3 / 3
+                </div>
+                <img src="https://www.purina-arabia.com/sites/default/files/styles/hero_image_regular_desktop/public/2025-09/AOA_CENMKTG_PU_Website%20Article_27-Your%20Cat%27s%20Age%20in%20Human%20Years_1440x560px_091625_1.jpg?itok=2LtZAIvP" style="width: 100%">
+                <div class="text">Caption Three</div>
+            </div>
+            
+            <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlides(1)">&#10095;</a>
+
+        </div>
+
+        <div class="slideshow1-dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </body>
+</html>
