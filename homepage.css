@@ -12,54 +12,149 @@
     box-sizing: border-box;
 }
 
-.top-page {
-    background-color: black;
-    height: 100px;
-    max-width: 100%;
-    position: relative;
+body {
+    background-color: rgb(200, 200, 200);
+    margin: 0;
 }
 
-.top-page-content-background {
-    background-color: #ce9ffc;
-    border-radius: 50px;
-    position: relative;
-    max-width: 99%;
-    height: 90%;
-    top: 5%;
-    left: 0.5%;
-    right: 0.5%;
-    bottom: 5%;
+header {
+    background-color: white;
+    width: 100%;
 }
 
-.top-page-content-welcome {
-    color: white;
-    text-align: center;
-    /* border-color: black;
-    border: 1px;
-    border-style: solid; */
-    position: relative;
-}
-
-.top-page-content-selectors {
+.page-top-content {
+    /* color: #ce9ffc; THIS IS LILAC */
     color: black;
-    margin-left: 1%;
-    margin-right: 1%;
-    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+div.name {
+    width: 40%;
+    text-align: left;
+}
+
+div.content {
+    width: 60%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.page-top-content div {
+    height: fit-content;
+    margin: auto;
+}
+
+h1.name {
+    transform: translateX(3%);
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.page-top-content-links {
+    color: black;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 a:link {
-    color: red;
+    color: #a35de9;
 }
 
 a:visited {
-    color: green;
+    color: blue;
 }
 
 a:hover {
     color: purple;
 }
 
+/* Button styling */
+
+span.dropdown-name::after {
+    content: '';
+    border: 8px solid transparent;
+    border-top: 8px solid black;
+    margin-left: 2px;
+    margin-bottom: -2px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+/* span.dropdown-name::after:hover {
+    color: #a35de9;
+} */
+
+span.dropdown-name:hover {
+    color: #a35de9;
+}
+
+.dropdown-button {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.top-page-dropdown {
+    position: relative;
+    display: flex;
+}
+
+.top-page-dropdown button {
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+.about-me {
+    border: none;
+    font-size: 16px;
+    padding: 16px;
+    text-align: center;
+}
+
+.about-me span:hover { /* remove dotted border and make the area you have to click tighter */
+    color: #717171;
+    /* border: none; */
+}
+
+/* End of button links styling */
+
 .featured-content {
+    top: auto;
     max-width: 1000px;
     position: relative;
     margin: auto;
