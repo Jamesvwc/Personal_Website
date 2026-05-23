@@ -94,15 +94,15 @@ span.dropdown-name::after {
 
 span.dropdown-name:hover {
     color: #a35de9;
+    cursor: pointer;
 }
 
-.dropdown-button {
+.dropdown-container {
     background-color: white;
     color: black;
     padding: 16px;
     font-size: 16px;
     border: none;
-    cursor: pointer;
 }
 
 .top-page-dropdown {
@@ -110,25 +110,22 @@ span.dropdown-name:hover {
     display: flex;
 }
 
-.top-page-dropdown button {
-    display: flex;
-    flex-direction: row;
-}
-
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
     z-index: 1;
+    width: 143px;
 }
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 12px;
     text-decoration: none;
     display: block;
+    font-weight: inherit;
+    font-size: inherit;
 }
 
 .dropdown-content a:hover {

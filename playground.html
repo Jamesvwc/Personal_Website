@@ -30,7 +30,7 @@
  you could also find the general result for any series of the form
  1/n^2k, k\inZ -->
     <body>
-        <div class="featured-content">
+        <!-- <div class="featured-content">
             <div class="slideshow slideshow-fade">
                 <div class="slideshow-numbers">
                     1 / 3
@@ -62,17 +62,27 @@
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
+        </div> -->
 
         <!-- Dropdown menu test -->
 
-        <div class="dropdown">
+        <!-- <div class="dropdown">
             <button class="dropdown-button">Dropdown</button>
             <div class="dropdown-content">
                 <a href="#">Link 1</a>
                 <a href="#">Link 2</a>
                 <a href="#">Link 3</a>
             </div>
+        </div> -->
+
+        <div class="dropdown-container">
+            <span class="dropdown-button-test" id="dropdown-button-test" onclick="dropdownToggle()">Food for thought
+                <div class="dropdown-content-container" id="dropdown">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </span>
         </div>
         
     </body>

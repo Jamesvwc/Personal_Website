@@ -31,24 +31,22 @@ function showSlides(n) {
 
 // Functionality for buttons at the top page of the homepage -------------------------
 
-function dropdownToggle() {
-    if (event.target.matches(".projects-dropdown-button")) {
-        document.getElementById("projects-dropdown-content").classList.toggle("show");
-        document.getElementById("blog-dropdown-content").classList.remove("show");
-    }
-    if (event.target.matches(".blog-dropdown-button")) {
-        document.getElementById("blog-dropdown-content").classList.toggle("show");
-        document.getElementById("projects-dropdown-content").classList.toggle("show");
-    }
-}
-
 window.onclick = function(event) {
-    if (!event.target.matches(".projects-dropdown-button") && !event.target.matches(".blog-dropdown-button")) {
+    console.log(event.target.classList.contains("dropdown-name"));
+    if (!event.target.classList.contains("dropdown-name")) {
         let collection = document.getElementsByClassName("dropdown-content");
         let i = 0;
         for (; i < collection.length; i++) {
             collection[i].classList.remove("show");
         }
+    } 
+    else if (event.target.classList.contains("projects-dropdown-button")) {
+        document.getElementById("projects-dropdown-content").classList.toggle("show");
+        document.getElementById("blog-dropdown-content").classList.remove("show");
+    }
+    else if (event.target.classList.contains("blog-dropdown-button")) {
+        document.getElementById("blog-dropdown-content").classList.toggle("show");
+        document.getElementById("projects-dropdown-content").classList.remove("show");
     }
 }
 
