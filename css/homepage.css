@@ -20,28 +20,28 @@ body {
 header {
     background-color: white;
     width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    color: black;
 }
 
-.page-top-content {
+/* .page-top-content { */
     /* color: #ce9ffc; THIS IS LILAC */
-    color: black;
+    /* color: black;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: space-between;
     width: 100%;
-}
-
-div.name {
-    width: 40%;
-    text-align: left;
-}
+} */
 
 div.content {
-    width: 60%;
+    width: 100%;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 .page-top-content div {
@@ -50,10 +50,10 @@ div.content {
 }
 
 h1.name {
-    transform: translateX(3%);
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 20px;
+    width: fit-content;
 }
 
 .page-top-content-links {
@@ -106,10 +106,16 @@ span.dropdown-name:hover {
     position: relative;
 }
 
-.nav-container {
+.projects-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.blogs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .top-page-dropdown {
