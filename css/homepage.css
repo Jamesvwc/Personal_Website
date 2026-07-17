@@ -49,11 +49,21 @@ div.content {
     margin: auto;
 }
 
-h1.name {
+a.name {
     margin-left: 20px;
     margin-right: 20px;
     font-size: 20px;
     width: fit-content;
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+a.name:hover {
+    color: black
 }
 
 .page-top-content-links {
@@ -68,12 +78,9 @@ a:link {
     color: #a35de9;
 }
 
-a:visited {
-    color: blue;
-}
-
 a:hover {
     color: purple;
+    cursor: pointer;
 }
 
 /* Buttons styling */
@@ -160,6 +167,7 @@ span.dropdown-name:hover {
 
 .about-me span:hover { /* remove dotted border and make the area you have to click tighter */
     color: #a35de9;
+    cursor: pointer;
 }
 
 /* End of button links styling */
