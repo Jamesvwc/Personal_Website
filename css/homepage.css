@@ -106,6 +106,12 @@ span.dropdown-name:hover {
     position: relative;
 }
 
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
 .top-page-dropdown {
     position: relative;
     display: flex;
@@ -119,7 +125,6 @@ span.dropdown-name:hover {
     z-index: 1;
     min-width: 300px;
     top: 100%;
-    padding-top: 16px; /* to match the padding of the above div */
 }
 
 .dropdown-content a {
