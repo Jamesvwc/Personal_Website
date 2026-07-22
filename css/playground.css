@@ -118,7 +118,7 @@
     background-color: #3e8e41;
 } */
 
-.dropdown-container {
+/* .dropdown-container {
     text-align: center;
     padding: 15px;
 }
@@ -129,4 +129,40 @@
 
 .show {
     display: block;
+} */
+
+p {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-button {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    width: 97%;
+    height: 97%;
+    border: 1px solid black;
+    font-size: 30pt;
+    background-color: aqua;
+    transition: transform 0.3s ease;
+}
+
+.projects-button:hover {
+    transform: translate(4%, -4%) rotate(5deg);
+    cursor: pointer;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    margin: auto;
+    width: 300px;
+    height: 200px;
 }

@@ -29,25 +29,45 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
-// Functionality for buttons at the top page of the homepage -------------------------
+// // Functionality for buttons at the top page of the homepage -------------------------
 
-window.onclick = function(event) {
-    console.log(event.target.classList.contains("dropdown-name"));
-    if (!event.target.classList.contains("dropdown-name")) {
-        let collection = document.getElementsByClassName("dropdown-content");
-        let i = 0;
-        for (; i < collection.length; i++) {
-            collection[i].classList.remove("show");
-        }
+// window.onclick = function(event) {
+//     console.log(event.target.classList.contains("dropdown-name"));
+//     if (!event.target.classList.contains("dropdown-name")) {
+//         let collection = document.getElementsByClassName("dropdown-content");
+//         let i = 0;
+//         for (; i < collection.length; i++) {
+//             collection[i].classList.remove("show");
+//         }
+//     } 
+//     else if (event.target.classList.contains("projects-dropdown-button")) {
+//         document.getElementById("projects-dropdown-content").classList.toggle("show");
+//         document.getElementById("blog-dropdown-content").classList.remove("show");
+//     }
+//     else if (event.target.classList.contains("blog-dropdown-button")) {
+//         document.getElementById("blog-dropdown-content").classList.toggle("show");
+//         document.getElementById("projects-dropdown-content").classList.remove("show");
+//     }
+// }
+
+// // -----------------------------------------------------------------------------------
+
+const projectsButton = document.getElementById('projects-button');
+const blogButton = document.getElementById('blog-button');
+const contactMeButton = document.getElementById('contact-me-button');
+
+projectsButton.addEventListener("click", () => pageNavigation(projectsButton));
+blogButton.addEventListener("click", () => pageNavigation(blogButton));
+contactMeButton.addEventListener("click", () => pageNavigation(contactMeButton));
+
+function pageNavigation(button) {
+    if (button.id === 'projects-button') {
+        window.open('Contact/contact.html');
     } 
-    else if (event.target.classList.contains("projects-dropdown-button")) {
-        document.getElementById("projects-dropdown-content").classList.toggle("show");
-        document.getElementById("blog-dropdown-content").classList.remove("show");
+    if (button.id === 'blog-button') {
+        window.open('Contact/contact.html');
     }
-    else if (event.target.classList.contains("blog-dropdown-button")) {
-        document.getElementById("blog-dropdown-content").classList.toggle("show");
-        document.getElementById("projects-dropdown-content").classList.remove("show");
+    if (button.id === 'contact-me-button') {
+        window.open('Contact/contact.html');
     }
 }
-
-// -----------------------------------------------------------------------------------
