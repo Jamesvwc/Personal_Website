@@ -29,28 +29,41 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
-// // Functionality for buttons at the top page of the homepage -------------------------
 
-// window.onclick = function(event) {
-//     console.log(event.target.classList.contains("dropdown-name"));
-//     if (!event.target.classList.contains("dropdown-name")) {
-//         let collection = document.getElementsByClassName("dropdown-content");
-//         let i = 0;
-//         for (; i < collection.length; i++) {
-//             collection[i].classList.remove("show");
-//         }
-//     } 
-//     else if (event.target.classList.contains("projects-dropdown-button")) {
-//         document.getElementById("projects-dropdown-content").classList.toggle("show");
-//         document.getElementById("blog-dropdown-content").classList.remove("show");
-//     }
-//     else if (event.target.classList.contains("blog-dropdown-button")) {
-//         document.getElementById("blog-dropdown-content").classList.toggle("show");
-//         document.getElementById("projects-dropdown-content").classList.remove("show");
-//     }
-// }
+// Functionality for buttons at the top page of the homepage -------------------------
 
-// // -----------------------------------------------------------------------------------
+
+const projectsNavButton = document.getElementById('nav-projects-button');
+const blogNavButton = document.getElementById('nav-blog-button');
+
+projectsNavButton.addEventListener("click", () => displayNavDropdown(projectsNavButton));
+blogNavButton.addEventListener("click", () => displayNavDropdown(blogNavButton));
+
+function displayNavDropdown(dropdown) {
+    console.log(dropdown);
+    switch (dropdown.id) {
+        case 'nav-projects-button':
+            document.getElementById('projects-dropdown-content').classList.toggle("show");
+            document.getElementById('blog-dropdown-content').classList.remove("show");
+            break;
+        case 'nav-blog-button':
+            document.getElementById('blog-dropdown-content').classList.toggle("show");
+            document.getElementById('projects-dropdown-content').classList.remove("show");
+            break;
+    }
+}
+
+window.onclick = function(event) {
+    if (!event.target.classList.contains("dropdown-name")) {
+        console.log(event.target.classList);
+        document.getElementById('blog-dropdown-content').classList.remove("show");
+        document.getElementById('projects-dropdown-content').classList.remove("show");
+    }
+}
+
+
+// Functionality for the content buttons in the middle of the page ---------------------------
+
 
 const projectsButton = document.getElementById('projects-button');
 const blogButton = document.getElementById('blog-button');
@@ -61,13 +74,15 @@ blogButton.addEventListener("click", () => pageNavigation(blogButton));
 contactMeButton.addEventListener("click", () => pageNavigation(contactMeButton));
 
 function pageNavigation(button) {
-    if (button.id === 'projects-button') {
-        window.open('Contact/contact.html');
+    switch (button.id) {
+        case "projects-button":
+            window.open('Contact/contact.html');
+            break;
+        case "blog-button":
+            window.open('Contact/contact.html');
+            break;
+        case "contact-me-button":
+            window.open('Contact/contact.html');
+            break;
     } 
-    if (button.id === 'blog-button') {
-        window.open('Contact/contact.html');
-    }
-    if (button.id === 'contact-me-button') {
-        window.open('Contact/contact.html');
-    }
 }
