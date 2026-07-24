@@ -64,6 +64,7 @@ a:hover {
 .top-page-nav {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
 }
 
 .nav-container {
@@ -119,6 +120,7 @@ a.dropdown-content {
     font-size: 18px;
     padding: 15px;
     position: relative;
+    text-decoration: none;
 }
 
 a.dropdown-content:hover {
@@ -142,6 +144,16 @@ a.dropdown-content:hover {
     cursor: pointer;
 }
 
+.site-search {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 70%;
+}
+
+#site-search-bar {
+    margin-left: auto;
+}
+
 
 
 /* End of button links styling */
@@ -156,7 +168,7 @@ a.dropdown-content:hover {
     align-items: center;
     flex-direction: row;
     width: 100%;
-    height: 500px;
+    height: 600px;
 }
 
 .content-links-container {
@@ -235,6 +247,11 @@ a.dropdown-content:hover {
 
 /* Beginning of featured content styling */
 
+
+.featured-content-header {
+    text-align: center;
+    margin: auto;
+}
 
 .featured-content {
     top: auto;

@@ -166,3 +166,19 @@ p {
     width: 300px;
     height: 200px;
 }
+
+.search-container {
+    background-color: lightgray;
+    height: 50px;
+}
+
+.site-search {
+    margin: auto;
+    border: none;
+    padding: 6px;
+    font-size: 16px;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
